@@ -92,7 +92,7 @@ form.appendChild(textareaExp)
 // Acciones
 const acciones = document.createElement("div")
 acciones.className = "acciones"
-seccionAgregar.appendChild(acciones)
+form.appendChild(acciones)
 
 const btnAgregar = document.createElement("button")
 btnAgregar.type = "submit"
