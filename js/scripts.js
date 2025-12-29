@@ -1,5 +1,5 @@
 // ================== CONFIG ==================
-const API_URL = "PONE_ACA_TU_URL_DEL_APPS_SCRIPT"
+const API_URL = "https://script.google.com/macros/s/AKfycbyaw3r_Wm5iZQFRvPM3nkasp-klvdioTGeouAq2t5p4JhZbT0Xv4pcyyxic7ORHpVFGdw/exec"
 
 // ================== HEADER ==================
 const header = document.querySelector("header")
