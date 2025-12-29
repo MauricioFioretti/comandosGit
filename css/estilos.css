@@ -1,0 +1,253 @@
+:root{
+  --bg:#0f0f0f;
+  --surface:#212121;
+  --surface2:#181818;
+  --border:#3d3d3d;
+  --text:#fff;
+  --muted:#aaaaaa;
+  --accent:#3ea6ff;
+  --accent2:#67b8ff;
+  --btn:#272727;
+  --btnhover:#3f3f3f;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  padding:1.4rem;
+  background:var(--bg);
+  color:var(--text);
+  font-family:"Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+
+/* ======= HEADER ======= */
+.titulo{
+  display:flex;
+  flex-direction:column;
+  gap:.2rem;
+  margin-bottom:1.2rem;
+  position:relative;
+  padding-left:14px;
+}
+
+.titulo::before{
+  content:"";
+  position:absolute;
+  left:0; top:.25rem;
+  width:6px; height:44px;
+  border-radius:999px;
+  background:linear-gradient(180deg,#e50914,#f5c518);
+  box-shadow:0 0 10px rgba(229,9,20,.55);
+}
+
+.titulo h1{
+  margin:0;
+  font-family:"Bebas Neue",system-ui,sans-serif;
+  font-size:2.6rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+
+.subtitulo{
+  margin:0;
+  color:var(--muted);
+  font-size:.95rem;
+}
+
+/* ======= FORM ======= */
+.agregar{
+  background:var(--surface);
+  border:1px solid rgba(255,255,255,.04);
+  border-radius:14px;
+  padding:1rem;
+  margin-bottom:1rem;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:.65rem .9rem;
+}
+
+label{
+  color:var(--text);
+  font-size:.92rem;
+  margin-top:.2rem;
+}
+
+input, textarea{
+  width:100%;
+  background:#0f0f0f;
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:8px 10px;
+  color:var(--text);
+  font-size:.95rem;
+}
+
+textarea{ resize:vertical; min-height:86px; }
+
+/* que los campos grandes ocupen 2 columnas */
+#comando, #explicacion{
+  grid-column: 1 / -1;
+}
+
+/* ======= BOTONES ======= */
+.acciones{
+  display:flex;
+  gap:.6rem;
+  margin-top:.9rem;
+}
+
+button{
+  border-radius:10px;
+  padding:8px 14px;
+  cursor:pointer;
+  font-size:.92rem;
+  transition: transform .08s ease, background .15s ease;
+}
+
+button:active{ transform: scale(.99); }
+
+.btn-primary{
+  background:var(--accent);
+  color:#000;
+  border:none;
+}
+.btn-primary:hover{ background:var(--accent2); }
+
+.btn-ghost{
+  background:transparent;
+  color:var(--text);
+  border:1px solid rgba(255,255,255,.10);
+}
+.btn-ghost:hover{ background:rgba(255,255,255,.06); }
+
+/* ======= BARRA BUSCAR ======= */
+.barra{
+  display:flex;
+  gap:.8rem;
+  align-items:center;
+  margin-bottom:1rem;
+}
+
+.buscar{
+  flex:1;
+  background:var(--surface2);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:12px;
+  padding:10px 12px;
+}
+
+.contador{
+  color:var(--muted);
+  font-size:.9rem;
+  min-width:120px;
+  text-align:right;
+}
+
+/* ======= MURAL ======= */
+.mural{
+  display:flex;
+  flex-direction:column;
+  gap:.85rem;
+}
+
+.card{
+  background:var(--surface2);
+  border:1px solid rgba(255,255,255,.05);
+  border-radius:14px;
+  padding:1rem;
+}
+
+.card-top{
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+  align-items:flex-start;
+  margin-bottom:.7rem;
+}
+
+.card h2{
+  margin:0;
+  font-size:1.15rem;
+  font-weight:700;
+  letter-spacing:.02em;
+  color:#5da6e6;
+}
+
+.meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.45rem;
+  margin-top:.45rem;
+}
+
+.chip{
+  font-size:.8rem;
+  padding:.25rem .55rem;
+  border-radius:999px;
+  background:rgba(62,166,255,.15);
+  border:1px solid rgba(62,166,255,.25);
+  color:#cfe9ff;
+}
+
+.chip-soft{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.08);
+  color:var(--muted);
+}
+
+.btn-copy{
+  background:var(--btn);
+  color:var(--text);
+  border:1px solid rgba(255,255,255,.08);
+  padding:8px 12px;
+}
+.btn-copy:hover{ background:var(--btnhover); }
+
+/* bloque código */
+.code{
+  margin:0;
+  background:#0b0b0b;
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:12px;
+  padding:.85rem .9rem;
+  overflow:auto;
+}
+
+.code code{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size:.92rem;
+  color:#eaeaea;
+  white-space:pre;
+}
+
+.exp{
+  margin:.65rem 0 0 0;
+  color:var(--text);
+  line-height:1.35;
+}
+
+.fecha{
+  margin-top:.55rem;
+  color:var(--muted);
+  font-size:.82rem;
+}
+
+/* error */
+.error{
+  color:#ffb4b4;
+  background:rgba(204,0,0,.12);
+  border:1px solid rgba(204,0,0,.25);
+  padding:.8rem 1rem;
+  border-radius:12px;
+}
+
+@media (max-width: 720px){
+  body{ padding:1rem; }
+  .form-grid{ grid-template-columns: 1fr; }
+  #comando, #explicacion{ grid-column:auto; }
+  .contador{ min-width:auto; }
+}
